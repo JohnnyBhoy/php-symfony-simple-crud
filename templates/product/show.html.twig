@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<h1>Product</h1>
+
+	<a href={{path('product_index')}}>View All</a>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Size</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+	</th>
+	<tr>
+		<td>{{product.name}}</td>
+		<td>{{product.description}}</td>
+		<td>{{product.size}}</td>
+		<td>
+			<a href={{path('product_edit', {'id': product.id} )}}>Edit</a>
+            <a href={{path('product_delete', {'id': product.id} )}}>Delete</a>
+		</td>
+	</tr>
+</thead></table>{% endblock %}
